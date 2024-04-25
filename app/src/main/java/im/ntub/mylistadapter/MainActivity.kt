@@ -49,8 +49,8 @@ class MainActivity : AppCompatActivity() {
         listView.adapter = myAdapter
         listView.setOnItemClickListener { parent, view, position, id ->
             AlertDialog.Builder(this)
-                .setTitle("你按了${items2d[position][0]}!!")
-                .setMessage("你按了${items2d[position][1]}!!")
+                //.setTitle("你按了${items2d[position][0]}!!")
+                .setMessage("你按了${data[position].name}!!")
                 .setPositiveButton("好"){ d, w->}
                     .show()
         }
