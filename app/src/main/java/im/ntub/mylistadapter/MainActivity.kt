@@ -39,7 +39,14 @@ class MainActivity : AppCompatActivity() {
                 return view
             }
         }
-        listView.adapter = arrayAdapter
+
+        val data = ArrayList<Item>()
+        data.add(Item(R.drawable.buffalo,"牛阿"))
+        data.add(Item(R.drawable.cow, "乳牛阿"))
+        data.add(Item(R.drawable.flamingo, "紅鶴"))
+        data.add(Item(R.drawable.wildboar, "山豬?"))
+        val myAdapter = MyAdapter(this, data, R.layout.adapter_item)
+        listView.adapter = myAdapter
         listView.setOnItemClickListener { parent, view, position, id ->
             AlertDialog.Builder(this)
                 .setTitle("你按了${items2d[position][0]}!!")
