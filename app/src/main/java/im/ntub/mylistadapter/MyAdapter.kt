@@ -12,7 +12,6 @@ public class MyAdapter(context: Context,
                        val layoutId: Int): ArrayAdapter<Item>(context, layoutId, data) {
     //回傳長度
     override fun getCount() = data.size
-
     //回傳指定位置的資料
     override fun getItem(position: Int) = data[position]
     //回傳指定位置的資料識別標籤
